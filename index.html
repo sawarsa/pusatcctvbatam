@@ -2,11 +2,13 @@
 <html lang="id">
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
-  j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5RPNFLT3'+dl;
-  f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5RPNFLT3');</script>
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5RPNFLT3');
+  </script>
   <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8" />
@@ -15,7 +17,6 @@
   <meta name="description" content="Pusat CCTV Batam - Solusi keamanan profesional di Batam. Pasang CCTV, alarm, fingerprint, PABX, dan sistem keamanan lainnya dengan teknisi berpengalaman.">
   <meta name="robots" content="index, follow">
 
-  <!-- perbaikan path gambar -->
   <link rel="icon" href="/logo.webp" type="image/webp">
   <meta property="og:title" content="Pusat CCTV Batam | Jasa Pasang CCTV Profesional">
   <meta property="og:description" content="Instalasi CCTV, alarm, fingerprint & PABX di seluruh Batam. Teknisi berpengalaman, rapi & bergaransi.">
@@ -44,10 +45,11 @@
     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
     (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init','517991158551582'); fbq('track','PageView');
+    fbq('init','119211728144504'); 
+    fbq('track','PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=517991158551582&ev=PageView&noscript=1"/></noscript>
+    src="https://www.facebook.com/tr?id=119211728144504&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel Code -->
 </head>
 <body>
@@ -63,7 +65,8 @@
          Teknisi berpengalaman, hasil rapi dan bergaransi.</p>
 
       <div>
-        <a href="https://wa.me/6281573354593" class="btn js-wa">💬 WhatsApp Kami</a>
+        <!-- WA & IG buka tab baru -->
+        <a href="https://wa.me/6281573354593" class="btn js-wa" target="_blank" rel="noopener">💬 WhatsApp Kami</a>
         <a href="/harga.html" class="btn js-price">💰 Lihat Harga Paket</a>
         <a href="https://instagram.com/cctv_batam2" target="_blank" rel="noopener" class="btn">📷 Lihat Instagram</a>
       </div>
@@ -77,23 +80,24 @@
   <footer>© 2025 Pusat CCTV Batam. All Rights Reserved.</footer>
 
   <script>
-    // Kirim event ke GTM (dataLayer) & Meta Pixel saat klik WA / Harga
-    (function(){
-      function pushDL(event, extra){
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(Object.assign({event}, extra||{}));
+  (function(){
+    function pushDL(event, extra){
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({event}, extra||{}));
+    }
+    // Tidak perlu delay karena buka tab baru
+    document.addEventListener('click', function(e){
+      const wa = e.target.closest('a.js-wa');
+      if (wa){
+        pushDL('whatsapp_click', {link_url: wa.href, page: location.pathname});
+        if (window.fbq) fbq('track', 'Lead');
       }
-      function onClick(sel, eventName, fbEvent){
-        document.addEventListener('click', function(e){
-          var a = e.target.closest(sel);
-          if(!a) return;
-          pushDL(eventName, {link_url: a.href, page: location.pathname});
-          if(window.fbq && fbEvent) fbq('track', fbEvent);
-        });
+      const price = e.target.closest('a.js-price');
+      if (price){
+        pushDL('view_pricing', {link_url: price.href, page: location.pathname});
       }
-      onClick('a.js-wa', 'whatsapp_click', 'Lead');  // untuk iklan Meta
-      onClick('a.js-price', 'view_pricing', null);   // bisa dipakai di GTM
-    })();
+    });
+  })();
   </script>
 </body>
 </html>
