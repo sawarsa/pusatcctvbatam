@@ -518,11 +518,11 @@
 }
 
 /* Soft hide (BUKAN HILANG) */
-.whatsapp-float.soft-hide {
+/* .whatsapp-float.soft-hide {
     opacity: 0.35;
     transform: scale(0.85);
     box-shadow: none;
-}
+} */
 
 /* MOBILE */
 @media (max-width: 450px) {
