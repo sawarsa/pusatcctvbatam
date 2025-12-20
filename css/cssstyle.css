@@ -91,7 +91,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background-image: url("../img/header-bg..jpg"); /* Pastikan path gambar header-bg.jpg benar */
+            background-image: url("../img/header-bg.webp"); /* Pastikan path gambar header-bg.jpg benar */
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
