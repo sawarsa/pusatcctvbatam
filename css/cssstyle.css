@@ -115,7 +115,7 @@
             background: salmon; /* Placeholder, tidak terlalu penting */
             inset: 0;
             z-index: 1;
-            -webkit-mask-image: url("img/header-bg.svg"); /* Pastikan path gambar header-bg.svg benar */
+            -webkit-mask-image: url("img/header-bg.webp"); /* Pastikan path gambar header-bg.svg benar */
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: cover;
             -webkit-mask-position: center;
