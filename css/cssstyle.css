@@ -658,10 +658,41 @@
             }
         }
 
-    
+    /* RESPONSIF TOMBOL WHATSAPP - MOBILE */
+@media (max-width: 450px) {
+    .whatsapp-float {
+        bottom: 16px;
+        right: 16px;
+        
+        /* Ubah width & height ke auto agar teks tidak terpotong */
+        width: auto; 
+        height: auto;
+        
+        /* Berikan padding agar teks punya ruang */
+        padding: 10px 15px; 
+        
+        /* Kembalikan border radius agar tetap lonjong, bukan bulat sempurna */
+        border-radius: 50px; 
+        
+        /* Atur ukuran font agar terlihat di HP */
+        font-size: 14px; 
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        animation: pulse-green 2s infinite; /* Tetap aktifkan animasi jika mau */
+        box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    }
+
+    .whatsapp-float i {
+        width: 20px;
+        height: 20px;
+    }
+}
         /* Responsif untuk HP*/
 /* RESPONSIF TOMBOL WHATSAPP - MOBILE */
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
     .whatsapp-float {
         bottom: 16px;
         right: 16px;
@@ -678,7 +709,7 @@
         justify-content: center;
 
         animation: none;           /* matikan pulse */
-        box-shadow: 0 4px 10px rgba(0,0,0,.25);
+        /* box-shadow: 0 4px 10px rgba(0,0,0,.25);
     }
 
     .whatsapp-float i {
@@ -688,4 +719,4 @@
 }
 .whatsapp-float.attention {
     animation: pulse-green 2s infinite;
-} 
+/* }  */ 
