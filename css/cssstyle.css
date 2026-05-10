@@ -689,4 +689,80 @@
         height: 20px;
     }
 }
-  
+  /* =========================================
+   FLOATING INSTAGRAM PORTFOLIO
+========================================= */
+
+.portfolio-float {
+    position: fixed;
+    bottom: 95px;
+    right: 24px;
+
+    background: #E1306C;
+    color: #fff;
+
+    padding: 12px 20px;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+
+    text-decoration: none;
+
+    z-index: 10000;
+
+    box-shadow: 0px 8px 15px rgba(225, 48, 108, 0.3);
+
+    transition: all 0.3s ease;
+
+    animation: pulse-instagram 2s infinite;
+}
+
+.portfolio-float:hover {
+    background: #c13584;
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 20px rgba(193, 53, 132, 0.4);
+}
+
+.portfolio-float i {
+    width: 24px;
+    height: 24px;
+}
+
+/* Animasi */
+@keyframes pulse-instagram {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(225, 48, 108, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(225, 48, 108, 0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 450px) {
+    .portfolio-float {
+        bottom: 80px;
+        right: 16px;
+
+        padding: 10px 15px;
+
+        font-size: 14px;
+    }
+
+    .portfolio-float i {
+        width: 20px;
+        height: 20px;
+    }
+}
