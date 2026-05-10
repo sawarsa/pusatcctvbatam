@@ -233,13 +233,12 @@
             line-height: 1.6;
         }
 
-        .menu .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 5rem;
-            justify-content: center;
-        }
-
+       .menu .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 5rem;
+}
         .menu .row .menu-card {
             text-align: center;
             padding-bottom: 4rem;
@@ -690,33 +689,4 @@
         height: 20px;
     }
 }
-        /* Responsif untuk HP*/
-/* RESPONSIF TOMBOL WHATSAPP - MOBILE */
-/* @media (max-width: 450px) {
-    .whatsapp-float {
-        bottom: 16px;
-        right: 16px;
-
-        width: 52px;
-        height: 52px;
-        padding: 0;
-
-        border-radius: 50%;
-        font-size: 0;              
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        animation: none;           /* matikan pulse */
-        /* box-shadow: 0 4px 10px rgba(0,0,0,.25);
-    }
-
-    .whatsapp-float i {
-        width: 26px;
-        height: 26px;
-    }
-}
-.whatsapp-float.attention {
-    animation: pulse-green 2s infinite;
-/* }  */ 
+  
