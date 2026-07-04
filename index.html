@@ -41,7 +41,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/feather-icons" defer></script>
     <link rel="stylesheet" href="css/cssstyle.css" />
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -652,11 +652,20 @@
 
     <footer>
       <div class="socials">
-        <a href="https://instagram.com/spesialist_cctv_batam"
+        <a
+          href="https://instagram.com/spesialist_cctv_batam"
+          aria-label="Instagram Pusat CCTV batam"
           ><i data-feather="instagram"></i
         ></a>
-        <a href="https://wa.me/6281573354593"><i data-feather="phone"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61568478249345"
+        <a
+          href="https://wa.me/6281573354593"
+          aria-label="WhatsApp Pusat CCTV batam"
+        >
+          <i data-feather="phone"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61568478249345"
+          aria-label="Facebook Pusat CCTV batam"
           ><i data-feather="facebook"></i
         ></a>
       </div>
@@ -675,7 +684,9 @@
 
     <div class="modal" id="item-detail-modal">
       <div class="modal-container">
-        <a href="#" class="close-icon"><i data-feather="x"></i></a>
+        <a href="#" class="close-icon" aria-label="Tutup Modal">
+          <i data-feather="x"></i>
+        </a>
         <div class="modal-content">
           <img src="img/products/1.jpg" alt="Detail Proyek CCTV Batam" />
           <div class="product-content">
